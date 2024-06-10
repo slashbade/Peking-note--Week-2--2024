@@ -1,0 +1,2887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Week 2 Lecture notes </title>
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+
+<div class="titlepage">
+<h1>Week 2 Lecture notes </h1>
+</div>
+
+<h1 id="a0000000002">1 Group actions</h1>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000003">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.1</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000003">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>A (left) group action of a group \(G\) on a set \(A\) is a map from \(G \times A\) to \(A\) such that \((g,a) \mapsto g\cdot a = ga\) satisfying the following properties: </p>
+<ol class="enumerate">
+  <li><p>\(g_1\cdot (g_2 \cdot a) = (g_1g_2)\cdot a\) for any \(g_1, g_2 \in G\) and \(a \in A\) </p>
+</li>
+  <li><p>\(1 \cdot a = a\) for any \(a \in A\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000004">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.2</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000004">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>We have the natural action of \(S_n\) on \(\{ 1, \dots , n\} \). </p>
+</li>
+  <li><p>The multiplication map \(G \times G \rightarrow G\) defines an action of \(G\) on itself. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000005">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.3</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000005">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000006"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let a group \(G\) act on a set \(A\). Then we have a group homomorphism </p>
+<div class="displaymath" id="a0000000007">
+  \[  G \rightarrow Perm(A), \quad g \mapsto (a \mapsto g\cdots a).  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000006">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let us write \(\sigma _g\) for the map \(\sigma _g: A \rightarrow A\), \(\sigma _g(a) = g\cdot a\). </p>
+<p>We first check this is a bijection, hence a well-defined map from \(G\) to \(Perm(A)\). We then check this is a group homomorphism. </p>
+
+  </div>
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="a0000000008">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.4</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000008">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="remark_thmcontent">
+  <p>It follows that a group action on a set is equivalent to a group homomorphism to the permutation group. </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000009">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.5</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000009">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let \(G\) be a group and \(A\) be a set. We always have the trivial action of \(G\) on \(A\), that is, \(g\cdot a =a\) for any \(g\in G\) and \(a\in A\). </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000010">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.6</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000010">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let \(G\) be a group. We define the conjugation action of \(G\) on its own by \(g\cdot h = ghg^{-1}\). That is, for each \(g \in G\), define \(c_g \colon G \to G\) to be conjugation </p>
+<div class="displaymath" id="a0000000011">
+  \[  c_g(x)=gxg^{-1}.  \]
+</div>
+<p>We show that it is an action. To verify axiom (1), note that for each \(x \in G\), </p>
+<div class="displaymath" id="a0000000012">
+  \begin{align*}  (c_g \circ c_h)(x) = &  c_g(c_h(x)) \\ = &  c_g(hxh^{-1}) \\ = &  g(hxh^{-1})g^{-1} \\ = &  (gh)x(gh)^{-1} \\ = &  c_gh(x). \end{align*}
+</div>
+<p> Therefore, \(c_g \circ c_h = c_{gh}\). To prove axiom (2), note that for each \(x \in G\), \(c_1(x) = 1x1^{-1} = x\). </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000013">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.7</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000013">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let \(H\) be any subgroup of \(G\). Define an action of \(G\) on \(G/H\) by the left translation </p>
+<div class="displaymath" id="a0000000014">
+  \[  \tau _g\colon aH \mapsto gaH \text{ for all } g\in G,~  aH\in G/H.  \]
+</div>
+<p> This satisfies the two axioms for a group action. Also, \(\tau _g\) is a permutation in \(S_{G/H}\) and the map \(g\mapsto \tau _g\) is a homomorphism from \(G\) to \(S_{G/H}\). </p>
+
+  </div>
+</div>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000015">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.8</span>
+    <span class="defi_thmtitle">Stabilizers</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000015">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p> Let a group \(G\) act on a set \(A\). </p>
+<ol class="enumerate">
+  <li><p>For any \(a \in A\), we define the stabilizer subgroup of \(G\) by </p>
+<div class="displaymath" id="a0000000016">
+  \[  G_a = {\rm Stab}_G(a) = \{ g \in G \vert g \cdot a = a\} .  \]
+</div>
+</li>
+  <li><p>For any subset \(B \subset A\), we define </p>
+<div class="displaymath" id="a0000000017">
+  \[  {\rm Stab}_G(B) = \cap _{a\in B} {\rm Stab}_G(a) = \{ g \in G \vert g\cdot a = a \forall a \in B\} . \]
+</div>
+</li>
+  <li><p>We define the kernel of the action by \({\rm Stab}_G(A)\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000018">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.9</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000018">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Both \(G_a\) and \( {\rm Stab}_G(B)\) are subgroups of \(G\). The subgroup \({\rm Stab}_G(A)\) is the kernel of the corresponding group homomorphism \(G \rightarrow Perm(A)\) of the group action. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000019">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000020">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.10</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000020">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <ol class="enumerate">
+  <li><p>Let \(A \subset G\) be a non-empty subset of \(G\). Define \(C_G(A) = \{ g \in G \vert g a g^{-1} = a \text{ for all } a \in A\} \). This subgroup is called the centralizer of \(A\) in \(G\). (Check this is indeed a subgroup.) </p>
+</li>
+  <li><p>The center of \(G\) is defined to be the subgroup \(Z(G) = \{ g\in G \vert g a g^{-1} =a \text{ for all } a \in G\} \). (Check this is indeed a subgroup.) </p>
+</li>
+  <li><p>Let \(A \subset G\) be a non-empty subset of \(G\). The normalization of \(A\) is defined to be \(N_G(A) = \{ g \in G \vert gAg^{-1} = A\} \). (Check this is indeed a subgroup.) </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000021">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.11</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000021">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <ol class="enumerate">
+  <li><p>We consider the action of \(G\) on itself by conjugation, that is, \(g \cdot a = gag^{-1}\). The \(Stab_G(A) = C_G(A)\) for any \(A \subset G\). </p>
+</li>
+  <li><p>Let \(\mathcal{P}(G)\) be the power set of \(G\). We consider the action of \(G\) on \(\mathcal{P}(G)\) by conjugation. Then \(N_G(A) = Stab_G(A)\) for any \(A \subset G\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000022">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.12</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000022">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>Let \(G\) be an abelian group. Then \(C_G(A) = N_G(A) = Z(G) = G\) for any subset \(A \subset G\). </p>
+</li>
+  <li><p>Let \(S_4\) acts on \(\{ 1,2,3,4\} \) in the natural way. Then we have \(Stab_G(4) = S_3\) and the kernel of this action is \(\{ e\} \). </p>
+</li>
+  <li><p>Let \((12) \in S_4\). We compute \(C_{S_4}((12)) = \{ e, (12), (34), (12)(34)\} \). </p>
+<p>We have \(N_{S_4}((12)) = C_{S_4}((12))\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<h2 id="a0000000023">1.1 Orbits</h2>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000024">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.13</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000024">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>Let \(G\) act on a set \(A\). Let \(a \in A\). The orbit of \(a\) is defined as \(\mathcal{O}(a) = G \cdot a = \{ g a \in A \vert g \in G\} \). </p>
+<p>We say the action of \(G\) on \(A\) is transitive if \(A = G \cdot a\) for some \(a \in A\). </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000025">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.14</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000025">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>The left multiplication of \(G\) on itself is transitive. </p>
+</li>
+  <li><p>The natural action of \(S_n\) on \(\{ 1,2, \dots , n\} \) is transitive. </p>
+</li>
+  <li><p>The conjugation action of \(S_3\) on itself has \(3\) orbits. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000026">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.15</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000026">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(G\) act on a set \(A\). </p>
+<ol class="enumerate">
+  <li><p>For any two orbits \({\mathcal{O}}(a)\) and \({\mathcal{O}}(b)\), we have either \({\mathcal{O}}(a) = {\mathcal{O}}(b)\) or \({\mathcal{O}}(a) \cap {\mathcal{O}}(b) = \emptyset \). Therefore we have a parition of \(A\) by orbits. </p>
+</li>
+  <li><p>For any \(a \in A\), we have bijection between the set of cosets \(G/ Stab_{G}(a)\) and the \({\mathcal{O}}(a)\) orbit of \(a\). </p>
+</li>
+  <li><p>Assume \(G\) is a finite group. Then the cardinality of any orbit must divide \(|G|\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000027">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000028">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">1.16</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000028">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>Let \(G\) act on a finite set \(A\). Let \(I \subset A\) be a set of representative of \(G\)-orbits. Then we have </p>
+<div class="displaymath" id="a0000000029">
+  \[  | A | = \sum _{a \in I} | \mathcal{O}(a)|.  \]
+</div>
+
+  </div>
+</div>
+<h2 id="a0000000030">1.2 More on group actions</h2>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000031">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">1.17</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000031">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>Let \(G\) be a finite group and \(H \le G\) be a subgroup of \(G\). Then the order of \(H\) divides the order of \(G\) and the number of left cosets of \(H\) in \(G\) equals \(|G| / |H|\). </p>
+<p>In particular, we have \(|H| \mid |G|\) if \(|G|\) is finite. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000032">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000033">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.18</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000033">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>Let \(G\) be a (potentially infinite) group with a subgroup \(H\). The number of left cosets of \(H\) in \(G\) is called the index of \(H\) in \(G\) and is denoted by \(|G : H|\). </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000034">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.19</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000034">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>We have \(|{\mathbb {Z}}: 2{\mathbb {Z}}| =2\). Note that both \({\mathbb {Z}}\) and \(2{\mathbb {Z}}\) are infinite. </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000035">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.20</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000035">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>We consider the conjugation action of \(G\) on \(G\). Then we have \(Stab_G(G) = G\) and \(\cap _{g \in G} Stab_G(a) = Z(G)\). </p>
+</li>
+  <li><p>We consider the action \(G\) on \(G/H\) via left multiplication. This action is transitive. We have \(Stab_G(H) = H\). However, the kernel of this action is \(\cap _{g \in G} g H g^{-1}\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000036">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">1.21</span>
+    <span class="thm_thmtitle">Cayley’s theorem</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000036">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p> Any group is isomorphic to a subgroup of some permutation group. If \(G\) is finite of order \(n\), then \(G\) is isomorphic to a subgroup of \(S_n\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000037">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000038">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.22</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000038">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000039"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(G\) be a finite group of order \(n\). Let \(p\) be the smallest prime factor of \(n\). Then any subgroup of index \(p\) is normal (provided such a subgroup exists). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000039">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(H\) be a subgroup of \(G\) with index \(p\). We consider the action of \(G\) on \(G/H\). Let \(K = \cap _{g \in G} g H g^{-1} \subset H\) be the kernel of this action. Then we have a group homomorphism \(\phi : G \rightarrow S_p\) such that \(G/K \cong \phi (G)\) by the first isomorphism theorem. </p>
+<p>We see that \(|G/K| = | \phi (G)|\) must be a factor of \(|S_p| = p!\). We have \(n =|G| = |K| | \phi (G)|\). Since the smallest prime factor of \(n\) is \(p\). We can only have \(|G/K| = p\), or \(|K| = n/p = |H|\). We have \(K= H\). </p>
+
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000040">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">1.23</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000040">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>Let \(G\) be a finite group. Then any subgroup of index \(2\) must be normal. </p>
+
+  </div>
+</div>
+<h2 id="a0000000041">1.3 Conjugacy classes</h2>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000042">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.24</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000042">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>The orbits of \(G\) acting on itself by conjugation is called conjugacy classes of \(G\). </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000043">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.25</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000043">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>Let \(G\) be abelian. Then each conjugacy class consists of a single element of \(G\). </p>
+</li>
+  <li><p>The group \(S_3\) has three conjugacy classes. </p>
+</li>
+  <li><p>Let \(z \in Z(G)\). Then the conjugacy of \(z\) is precisely \(\{ z\} \). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000044">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.26</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000044">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(G\) be a finite group and let \(g_1, \dots , g_n\) be representatives of conjugacy classes of \(G\) not contained in the center. Then we have </p>
+<div class="displaymath" id="a0000000045">
+  \[  | G| = |Z(G)| + \sum _{i=1}^n |G : C_{G}(g_i)|.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000046">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000047">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">1.27</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000047">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000048"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>Let \(G\) be a group of order \(p^n\) for some prime \(p\). Then \(Z(G)\) is non-trivial. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000048">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We know \(|Z(G)| \ge 1\), since the identity element is in the center. Recall the class equation: </p>
+<div class="displaymath" id="a0000000049">
+  \[  | G| - \sum _{i=1}^n |G : C_{G}(g_i)| = |Z(G)|.  \]
+</div>
+<p>Note that \(|G : C_{G}(g_i)| {\gt} 1\), since \(C_{G}(g_i) \neq G\) by definition. Therefore \(p \mid |Z(G)|\). Since \(|Z(G)| \neq 0\), we must have \(|Z(G)| {\gt}1\). This finishes the proof. </p>
+
+  </div>
+</div>
+<p>Let us next give an explicit description of conjugacy classes of the symmetric \(S_n\). </p>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000050">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.28</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000050">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>Let \(n\) be positive integer. A partition of \(n\), denoted by \(\lambda \vdash n\), is a nondecreasing sequence \(\lambda = (\lambda _1, \dots , \lambda _k)\) of positive intergers such that \(\sum \lambda _i = n\). We denote the set of partitions of \(n\) by \({\mathcal{P}}(n)\). </p>
+
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000051">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">1.29</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000051">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>The set of conjugacy classes of \(S_n\) is in natural bijection with \({\mathcal{P}}(n)\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000052">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<h2 id="a0000000053">1.4 Subgroups of cyclic groups</h2>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000054">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">1.30</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000054">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>A group \(G\) is called cyclic if \(G\) can be generated by a single element, i.e., \(G = \langle x\rangle \) for some \(x \in G\). </p>
+
+  </div>
+</div>
+<p> Let \(G\) be an arbitrary group and \(x \in G\). Then the subgroup \(\langle x\rangle \) generated by \(x\) is a cyclic group. So we are studying the easieast subgroups of a group \(G\). </p>
+<p>Let \(G = \langle x \rangle \) be a cyclic group throughout this section. </p>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000055">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.31</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000055">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(G = \langle x \rangle \). Then \(|G| =ord(x)\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000056">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000057">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">1.32</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000057">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>If \(|G| = n\), then we have \( G \cong {\mathbb {Z}}/n{\mathbb {Z}}\). If \(|G| = \infty \), then we have \( G \cong {\mathbb {Z}}\). </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000058">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">1.33</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000058">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>For any \(n \in {\mathbb {Z}}\), the quotient group \({\mathbb {Z}}/ n {\mathbb {Z}}\) is cyclic. We can take \(\overline{1}\) as the cyclic generator. </p>
+</li>
+  <li><p>The group \(S_3\) is NOT cyclic. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000059">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.34</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000059">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(p \in {\mathbb {Z}}\) be a prime. If \(G\) is a group of order \(p\), then \(G\) is isomorphic to the cyclic group \({\mathbb {Z}}/p{\mathbb {Z}}\). </p>
+<p>In other words, there is a unique group of order \(p\) up to isomorphism. </p>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000060">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.35</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000060">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(H \le G\) be a subgroup. Then \(H = \langle x^a \rangle \) for some \(a \in {\mathbb {Z}}\) is also cyclic. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000061">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000062">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">1.36</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000062">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>Let \(H= \langle x^a \rangle \) be a subgroup of \(G\). Let \(d \ge 0\) be the g.c.d. of \(a\) and \(n\). Then \(H = \langle x^d \rangle \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000063">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000064">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">1.37</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000064">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>Let \(H= \langle x^d \rangle \) be a subgroup of \(G\) such that \(d \ge 0\) and \(d \mid n\). Then \(|H| =n/d\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000065">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<p>We summarize the discussion above as the following theorem. </p>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000066">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">1.38</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000066">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>Let \(G = \langle x \rangle \) be a cyclic group of order \(n\). Then \(\{ \langle x^d \rangle \vert d \ge 0, d \mid n\} \) is the set of all non-identical subgroups of \(G\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000067">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000068">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.39</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000068">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(H_1 = \langle x^{d_1} \rangle \) and \(H_2 = \langle x^{d_2} \rangle \) be subgroups of \(G\) with \(d_i \ge 0\) and \(d_i \mid n\). Then we have </p>
+<div class="displaymath" id="a0000000069">
+  \[  H_1 \cap H_2 = \langle x^{s} \rangle , \qquad \langle H_1 \cup H_2 \rangle = x^{t}.  \]
+</div>
+<p> Here \(t = gcd(d_1, d_2)\) and \(t = lcm (d_1, d_2)\). </p>
+
+  </div>
+</div>
+<h2 id="a0000000070">1.5 Automorphisms of cyclic groups</h2>
+<p>Let \(G = \langle x \rangle \) be a cyclic group of order \(n\). Recall the ring \({\mathbb {Z}}/n{\mathbb {Z}}\). </p>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000071">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.40</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000071">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(End(G)\) be the set endomorphisms of \(G\), i.e., group homomorphisms from \(G\) to \(G\). We have a bijection </p>
+<div class="displaymath" id="a0000000072">
+  \[  End(G) \cong {\mathbb {Z}}/n{\mathbb {Z}}, \sigma \mapsto a(\sigma ) \quad \text{ such that } \sigma \circ \sigma ' \mapsto a(\sigma ) a(\sigma ').  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000073">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<p>Let \(Aut(G)\) be the automorphism group of \(G\). </p>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000074">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">1.41</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000074">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>We have a group isomorphism </p>
+<div class="displaymath" id="a0000000075">
+  \[  Aut(G) \cong ({\mathbb {Z}}/n{\mathbb {Z}})^* = \{ \overline{a} \in {\mathbb {Z}}/n{\mathbb {Z}}\vert gcd(a,n) =1\}   \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000076">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<p>As we have seen in the proof, to understand the precise structure of the group \(Aut(G)\) we need to understand the ring \({\mathbb {Z}}/n{\mathbb {Z}}\). This will be the topic for the future semester. </p>
+<h1 id="a0000000077">2 Sylow theorems I</h1>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000078">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">2.1</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000078">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>Let \(G\) be a finite group and let \(p\) be a prime. </p>
+<ol class="enumerate">
+  <li><p>A group of order \(p^n (n {\gt} 0)\) is called a \(p\)-group. Subgroups of \(G\) of order \(p^n\) is called \(p\)-subgroups. </p>
+</li>
+  <li><p>Assume \(|G| = p^n m\) with \(p \nmid m\). Then a subgroup of \(G\) of order \(p^n\) is called a Sylow \(p\)-subgroup of \(G\). </p>
+</li>
+  <li><p>The set of all Sylow \(p\)-subgroups of \(G\) is denoted by \(Syl_p(G)\). We denote the cardinality of \(Syl_p(G)\) by \(n_p=n_p(G)\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000079">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">2.2</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000079">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000080"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(G\) be a finite abelian group and let \(p\) be a prime that divides the order of \(G\). Then \(G\) contains an element of order \(p\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000080">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We proceed by induction on \(|G|= p^{n}m\). Let \(x \in G\) be a non-trivial element, and write \(\langle x \rangle = H\). Then \(H\) is not trivial by assumption. If \(H= G\), then we can take \(P= \langle x^{p^{n-1}m} \rangle \). If \(H \neq G\) with \(p \vert |H|\), we can proceed with induction hypothesis. In any case, if \(p \vert |H|\), we are done. </p>
+<p>So we can assume \(p \nmid |H|\). Note that since \(G\) is abelian, \(H\) is normal. We have \(p \mid |G/H|\) and \(1 {\lt} |G/H| {\lt} |G|\). By induction hypothesis, we can find \(yH \in G/H\) of order \(p\). This means </p>
+<div class="displaymath" id="a0000000081">
+  \[  y^p = h \in H, \text{with } y \neq e.  \]
+</div>
+<p> In particular, we have \(y^a \notin H\) for any \(a\) coprime to \(p\). Let \(ord(h) = a\). Since \(a\) is a factor of \(|H|\), it must be coprime to \(p\). Therefore \(y^a \neq e\). We further have </p>
+<div class="displaymath" id="a0000000082">
+  \[  (y^a)^p = (y^p)^a =e.  \]
+</div>
+<p> We conclude that \(y^a\) is of order \(p\) in \(G\). </p>
+
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000083">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">2.3</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000083">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>Let \(G\) be a finite abelian group and let \(p\) be a prime that divides the order of \(G\). Then Sylow \(p\)-subgroup of \(G\) exists. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000084">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000085">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">2.4</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000085">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000086"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>Let \(G\) be a finite group and let \(p\) be a prime. Then Sylow \(p\)-subgroup of \(G\) exists. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000086">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We can assume \(p \vert |G|\), otherwise there is nothing to show. Let us assume \(p^n \vert |G|\) but \(p^{n+1} \nmid |G|\). We proceed by induction on \(|G|\). The base case is trivial. </p>
+<p>If \(p \mid |Z(G)|\), then we have an element \(x \in Z(G)\) of order \(p\). This is because \(Z(G)\) is abelian, hence we can apply the previous lemma. Then if \(P' \le G/\langle x \rangle \) is a Sylow \(p\)-subgroup of the quotient, \(\pi ^{-1}(P')\) will the Sylow p-subgroup of \(G\). </p>
+<p>Assume \(p \nmid |Z(G)|\). We write </p>
+<div class="displaymath" id="a0000000087">
+  \[  |G| = |Z(G)| + \sum _{i =1}^n |G/C_G(g_i)|.  \]
+</div>
+<p> Here \(\{ g_1, \dots , g_n\} \) is a set of representatives of non-trivial conjugacy classes. Since \(p \vert |G|\) and \(p \nmid |Z(G)|\), we must have \(p \nmid |G/C_G(g_i)|\) for some \(i\). </p>
+<p>Let us assume \(p \nmid |G/C_G(g_1)|\). Then \(p^n \nmid |C_G(g_1)|\). By assumption of \(g_1\) (non-trivial conjugacy class), we must have have \(C_G(g_1) \neq G\), or \(|C_G(g_1)| {\lt} |G|\). We apply induction hypothesis to obtain a Sylow \(p\)-subgroup of \(|C_G(g_1)| \) of order \(p^n\). This is clearly the Sylow \(p\)-subgroup of \(G\) as well. </p>
+
+  </div>
+</div>
+<h2 id="a0000000088">2.1 Sylow theorems II</h2>
+<p>Let \(S\) be the set of all Sylow \(p\)-subgroups. Then \(|S| = n_p\) by definition. We know \(S\) is not empty now. We consider the action of \(G\) on \(S\) by conjugation. Let \(Q \in S\) and \(G\cdot Q\) be the orbit of \(Q\). The next few theorems explore the action of a \(p\)-subgroup (could be a Sylow \(p\)-subgroup as well) \(P\) on \(S\) and \(G\cdot Q\). </p>
+<p>Let us record a useful lemma here. </p>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000089">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">2.5</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000089">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000090"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(Q\) be a Sylow \(p\)-subgroup of \(G\). Let \(P\) be any \(p\)-subgroup of \(G\), then we have \((N_P(Q) =) P \cap N_G(Q) = P \cap Q\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000090">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(H = P \cap N_G(Q) = \{ g \in P \vert gQg^{-1} = Q\} \). It is clear that \(Q \cap P \subset H\). We show the reverse inclusion. </p>
+<p>We claim \(HQ \) is a \(p\)-subgroup of \(G\). It is straightforward to check that \(HQ\) is a subgroup of \(G\) and \(Q\) is a normal subgroup of \(H\). By the isomorphism theorem, we have </p>
+<div class="displaymath" id="a0000000091">
+  \[  HQ /Q \cong H/ H\cap Q.  \]
+</div>
+<p> We conclude that \(|HQ| = \frac{|H||Q|}{|H\cap Q|}\). Note that \(|H|\), \(|Q|\), \(|H\cap Q|\) are all powers of \(p\). So \(HQ\) is a \(p\)-subgroup of \(G\) containing the Sylow \(p\)-subgroup \(Q\). We must have \(HQ =Q\), that is, \(H \subset Q\). Hence \(H \subset P \cap Q\). </p>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000092">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">2.6</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000092">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000093"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(G\) be a finite group and let \(p\) be a prime. Then we have </p>
+<div class="displaymath" id="a0000000094">
+  \[  n_p \equiv 1 \mod p.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000093">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(P\) be a Sylow \(p\)-subgroup of \(G\). We consider the action of \(P\) on \(S\) by restriction. </p>
+<p>We consider the partition of \(S\) into \(P\)-orbits, say </p>
+<div class="displaymath" id="a0000000095">
+  \[  S = \mathcal{O}_1 \sqcup \mathcal{O}_2 \sqcup \cdots \sqcup \mathcal{O}_n.  \]
+</div>
+<p> Of course \(P \in S\) is an orbit consists of a single element. Let us just call this orbit \(\mathcal{O}_1\). Then we have </p>
+<div class="displaymath" id="a0000000096">
+  \[  n_p=|S| = 1 + |\mathcal{O}_2| + \cdots |\mathcal{O}_n|.  \]
+</div>
+<p>For any \( \mathcal{O}_i\) with \(i \neq 1\), we have bijections </p>
+<div class="displaymath" id="a0000000097">
+  \[  P/ Stab_P(Q_i) \cong \mathcal{O}_i, \quad \text{for any } P \neq Q_i \in \mathcal{O}_i  \]
+</div>
+<p> Here \(Stab_P(Q_i) = \{ g \in P \vert g Q_ig^{-1} = Q_i\} \). We have \(Stab_P(Q_i) = P\cap Q_i\) by the lemma. Then we see that \( p \mid |P/ Stab_P(Q_i)|\). Hence </p>
+<div class="displaymath" id="a0000000098">
+  \[  |S| \equiv 1 \mod p. \qedhere  \]
+</div>
+
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="cor:SylowCor">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">2.7</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#cor:SylowCor">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000099"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p> We have </p>
+<div class="displaymath" id="a0000000100">
+  \[  | G \cdot Q | \equiv 1 \mod p.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000099">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We consider the action of \(Q\) on \(G\cdot Q\). Then the same argument as the preivous theorem applies. </p>
+
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000101">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">2.8</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000101">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000102"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>Let \(G\) be a finite group and let \(p\) be a prime. Any \(p\)-subgroup is contained in some Sylow \(p\)-subgroup. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000102">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(P\) be a \(p\)-subgroup of \(G\). We consider the action of \(P\) on \(S\). We consider the partition of \(S\) by \(P\)-orbits, say </p>
+<div class="displaymath" id="a0000000103">
+  \[  S = \mathcal{O}_1 \sqcup \mathcal{O}_2 \sqcup \cdots \sqcup \mathcal{O}_n.  \]
+</div>
+<p> We have bijections </p>
+<div class="displaymath" id="a0000000104">
+  \[  P/ Stab_P(Q_i) \cong \mathcal{O}_i, \quad Q_i \in \mathcal{O}_i.  \]
+</div>
+<p> Recall \(Stab_P(Q_i) = \{ g \in P \vert g Q_ig^{-1} = Q_i\}  = P \cap Q_i\) by the previous lemma. We see thave </p>
+<div class="displaymath" id="a0000000105">
+  \[  \begin{cases}  p \mid |P/ Stab_P(Q_i)|= |\mathcal{O}_i|, &  \text{if } P \not\subset Q_i; \\ 1 =|P/ Stab_P(Q_i)|= |\mathcal{O}_i|, &  \text{if } P \subset Q_i. \end{cases}  \]
+</div>
+<p> Since \(|S| = |\mathcal{O}_1| + \cdots + |\mathcal{O}_n|\) is \(1\) mod \(p\), we must have \( 1 =|P/ Stab_P(Q_i)|\) for some \(i\). Hence \(P\) is contained in some Sylow \(p\)-subgroup. </p>
+
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000106">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">2.9</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000106">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000107"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>Let \(G\) be a finite group and let \(p\) be a prime. Any two Sylow \(p\)-subgroups are conjugate to each other. In other words, the action of \(G\) on \(S\) is transitive. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000107">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(P\) and \(Q\) be Sylow \(p\)-subgroups. We consider the action of \(P\) on \(G\cdot Q\). By definition \(G\cdot Q = \{ gQg^{-1}\vert g \in G\} \). We can then apply the same argument as the previous one thanks to Corollary&#160;<a href="index.html#cor:SylowCor">2.7</a>. </p>
+
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000108">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">2.10</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000108">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000109"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>Let \(G\) be a finite group and let \(p\) be a prime. Then we have </p>
+<div class="displaymath" id="a0000000110">
+  \[  n_p \mid |G|.  \]
+</div>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000109">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We know now \(S\) is a single \(G\)-orbit. So we have a bijection </p>
+<div class="displaymath" id="a0000000111">
+  \[  G/Stab_G(P) \cong S, \quad \text{for any } P \in S.  \]
+</div>
+<p> Then since \(|G/Stab_G(P)|\) divides \(|G|\), \(n_p\) divides \(|G|\). </p>
+
+  </div>
+</div>
+<h2 id="a0000000112">2.2 Consequences of Sylow theorems</h2>
+<p> We next discuss some consequences of Sylow theorems. </p>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000113">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">2.11</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000113">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>Let \(G\) be a finite group and let \(p\) be a prime. </p>
+<ol class="enumerate">
+  <li><p>Let \(P\) be a \(p\)-subgroup of \(G\) and \(Q\) be a Sylow \(p\)-subgroup of \(G\). Then we have </p>
+<div class="displaymath" id="a0000000114">
+  \[  P \subset gQg^{-1}, \text{for some } g \in G.  \]
+</div>
+</li>
+  <li><p>\(G\) has a unique Sylow \(p\)-subgroup \(P\) if and only if the Sylow \(p\)-subgroup \(P\) is normal. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000115">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">2.12</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000115">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>We consider the symmetric group \(S_3\). There are three Sylow 2-subgroups: \(\langle (12) \rangle \), \(\langle (23) \rangle \), \(\langle (13) \rangle \). There is only one Sylow 3-subgroup \(\langle (123) \rangle \cong A_3\), which is normal. </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000116">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">2.13</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000116">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let us classify groups of order \(15\) (up to isomorphism). </p>
+<p>Let \(G\) be such a group. We know </p>
+<div class="displaymath" id="a0000000117">
+  \[  n_3 \equiv 1 \mod 5 \quad \text{ and } \quad n_3 \vert 15.  \]
+</div>
+<p> We must have \(n_3 =1\). So we have a unique normal Sylow \(3\)-subgroup \(P_3\). Similarly we see that we have a unique normal Sylow \(5\)-subgroup \(P_5\). Note that since \(|P_3| =3\) and \(|P_5 | = 5\) are both primes, we must have \(P_3 \cong \mathbb {Z}/ 3 \mathbb {Z}\) and \(P_5 \cong \mathbb {Z}/ 5 \mathbb {Z}\). </p>
+<p>We then make the following claims </p>
+<ol class="enumerate">
+  <li><p>\(P_3 P_5\) is a subgroup of \(G\) </p>
+</li>
+  <li><p>We have \(|P_3 P_5| = \frac{|P_3| |P_5|}{ |P_3 \cap P_5|} = 15\). (This is a special case of double cosets.) </p>
+</li>
+  <li><p>We have \(P_3 P_5 = G\) for numerical reason. </p>
+</li>
+  <li><p>We have \(G \cong P_3 \times P_5 \cong \mathbb {Z}/ 15\mathbb {Z}\). </p>
+</li>
+</ol>
+<p>So we have only one group of order \(15\). </p>
+
+  </div>
+</div>
+<h2 id="a0000000118">2.3 Semi-direct products</h2>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000119">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">2.14</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000119">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>Let \(H\) and \(K\) be two groups. Let \(\phi : K \rightarrow Aut(H)\) be a group homomorphism. We define a binary operation on \(H \times K\) by </p>
+<div class="displaymath" id="a0000000120">
+  \[  (h_1, k_1) \cdot (h_2, k_2) = (h_1 \phi (k_1)(h_2), k_1k_2).  \]
+</div>
+
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000121">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">2.15</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000121">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000122"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>The binary operation defines a group structure on the set \(H \times G\). We denote this group by \(H \rtimes _{\phi } K\) (or simply \(H \rtimes K\)). This is called the semi-direct product of \(H\) and \(K\) with respect to \(\phi \). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000122">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Intuitively, we want to think of \(\phi (k_1)(h_2)\) as \(k_1 h_2 k_1^{-1}\). </p>
+
+  </div>
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="a0000000123">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">2.16</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000123">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="remark_thmcontent">
+  <p>We could have \(H \rtimes _{\phi } K \cong H \rtimes _{\psi } K\) for two different group homomorphisms \(K \rightarrow Aut(H)\). This will be precise in the next Proposition. </p>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000124">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">2.17</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000124">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(H \rtimes _{\phi } K\) be the semi-direct product of \(H\) and \(K\) with respect to \(\phi \). </p>
+<ol class="enumerate">
+  <li><p>\(|H \rtimes _{\phi } K| = |H| |K|\). </p>
+</li>
+  <li><p>\(\{ (h,e) \vert h \in H\} \) is a normal subgroup of \(H \rtimes _{\phi } K\) isomorphic to \(H\). We often just identify this subgroup with \(H\). </p>
+</li>
+  <li><p>\(\{ (e,k) \vert k \in K\} \) is a subgroup of \(H \rtimes _{\phi } K\) isomorphic to \(K\). We often just identify this subgroup with \(K\). </p>
+</li>
+  <li><p>\(H \cap K = \{ e\} \). </p>
+</li>
+  <li><p>For any \(k \in K\) and \(h \in H\), we have \(k h k^{-1} = \phi (k)(h)\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000125">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000126">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">2.18</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000126">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>Let \(\phi : K \rightarrow Aut(H)\) be the trivial group homomorphism. Then \(H \rtimes _\phi K \cong H \times K\). </p>
+</li>
+  <li><p>Let \(G\) be a group. We consider the permutation map \(\phi : S_n \rightarrow Aut(G^n)\). Then the semi-direct product \((G^n) \rtimes _\phi S_n\) is called the wreath product of \(G\) by \(S_n\), and often denoted by \(G \wr S_n\). </p>
+<p>The multiplication behaves as follows </p>
+<div class="displaymath" id="a0000000127">
+  \[  ((g_i), \sigma ) \cdot ((h_i), \tau ) = ((g_i h_{\sigma (i)}), \sigma \tau ).  \]
+</div>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000128">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">2.19</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000128">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(G\) be a group with two subgroups \(H\) and \(K\). Assume </p>
+<ol class="enumerate">
+  <li><p>\(H\) is normal in \(G\), </p>
+</li>
+  <li><p>\(H \cap K = \{ e\} \), </p>
+</li>
+  <li><p>\(HK = G\). </p>
+</li>
+</ol>
+<p> Then we have \(G \cong H \rtimes _\phi K\). Here \(\phi : K \rightarrow Aut(H)\) is given by \(k \mapsto (h \mapsto k h k^{-1})\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000129">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000130">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">2.20</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000130">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000131"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>There are exactly two groups (up to isomorphism) of order \(6\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000131">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We know we have two such groups \(\mathbb {Z}/6\mathbb {Z}\) and \(S_3\). </p>
+<p>Let \(G\) be such a group. We know </p>
+<div class="displaymath" id="a0000000132">
+  \[  n_3 \equiv 1 \mod 3 \quad \text{ and } \quad n_3 \vert 6.  \]
+</div>
+<p> We must have \(n_3 =1\). So we have a unique normal Sylow \(3\)-subgroup \(P_3 \cong \mathbb {Z}/3\mathbb {Z}\). </p>
+<p>We similarly know </p>
+<div class="displaymath" id="a0000000133">
+  \[  n_2 \equiv 1 \mod 2 \quad \text{ and } \quad n_2 \vert 6.  \]
+</div>
+<p> We have two cases for \(n_2\). We have either \(n_2 =1\) or \(n_2 = 3\). </p>
+<p>If \(n_2 =1\), then very much similar to the previous example, we have \(G \cong \mathbb {Z}/2\mathbb {Z} \times \mathbb {Z}/3\mathbb {Z} \cong \mathbb {Z}/6\mathbb {Z}\). </p>
+<p>Assume \(n_2 =3\) now. Let \(P_2\) be any one of the three Sylow \(2\)-subgroups. We still have following claims </p>
+<ol class="enumerate">
+  <li><p>\(P_2P_3\) is a groups. </p>
+</li>
+  <li><p>We have \(|P_2 P_3| = \frac{|P_2| |P_3|}{ |P_2 \cap P_3|} = 6\). (This is a special case of double cosets.) </p>
+</li>
+  <li><p>We have \(P_2 P_3 = G\) for numerical reason. </p>
+</li>
+</ol>
+<p> However, \(G \not\cong P_2 \times P_3\). Let us consider the conjugation action of \(P_2\) on \(P_3\). This is well-defined, since \(P_3\) is normal. (Recall from Midterm, if \(P_2\) is also normal, then this action is trivial.) So now we have a group homomorphism \(\phi : P_2 \rightarrow Aut (P_3) = Aut (\mathbb {Z}/3\mathbb {Z}) \cong \mathbb {Z}/2\mathbb {Z}\). </p>
+<p>We further divide into two cases. </p>
+<ol class="enumerate">
+  <li><p>If \(\phi \) is the trivial group homomorphis, then we have \(G \cong P_2 \times P_3\). We actually have a contradiction here, or we can relax the assumption. In any case, we have considered this case before. </p>
+</li>
+  <li><p>If \(\phi \) is the non-trivial group homomorphism, this means \(x y x^{-1} =y ^2\), there \(x\) is the generator \(P_2\) and \(y\) is the generator of \(P_3\). </p>
+<p>In this case, we have a group homomorphism \(P_3 \rtimes _\phi P_2 \to G\). We see that this is an isomorphism by cardinality reason. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<h2 id="a0000000134">2.4 Applications of Sylow’s theorems</h2>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000135">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">2.21</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000135">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>A simple group is a nontrivial group whose only normal subgroups are the trivial group and the group itself. </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000136">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">2.22</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000136">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let \(G\) be a group of order \(132\). Then \(G\) can not be simple. </p>
+<p>We have \(132 = 11 \times 2^2 \times 3\). We have </p>
+<div class="displaymath" id="a0000000137">
+  \[  n_3 \equiv 1 \mod 3 \quad \text{and} \quad n_3 \mid 132  \]
+</div>
+<div class="displaymath" id="a0000000138">
+  \[  n_2 \equiv 1 \mod 2 \quad \text{and} \quad n_2 \mid 132  \]
+</div>
+<div class="displaymath" id="a0000000139">
+  \[  n_{11} \equiv 1 \mod 11 \quad \text{and} \quad n_{11} \mid 132  \]
+</div>
+<p>Assume the contrary that \(G\) is simple. Then we must have \(n_{11} = 12\). Note that two Sylow \(11\)-subgroups intersection trivially. So there are \(12 \times 10 = 120\) elements of order \(11\). </p>
+<p>Now we look at \(n_3 \in \{ 1, 4, 22\} \). We know \(n_3 \neq 1\) by assumption. If \(n_3 = 4\), then we have \( 4 \times 2 =8\) elements of order \(3\). So the Sylow \(2\)-subgroup must be normal. If \(n_3 = 22\), then we clearly have too many elements beyond the cardinality of \(G\). </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000140">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">2.23</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000140">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let \(G\) be a group of order \(12 = 2^2 \times 3\). Then we claim either \(G\) has a normal Sylow \(3\)-subgroup or \(G\) has a normal Sylow \(2\)-subgroup. So this group can not be simple. </p>
+<p>Assume \(n_3 \neq 1\). Then we know </p>
+<div class="displaymath" id="a0000000141">
+  \[  n_3 \equiv 1 \mod 3 \quad n_3 \mid 12.  \]
+</div>
+<p> We can only have \(n_3 =4\). Note that different Sylow \(3\)-subgroups have trivial intersections. So the union of the four Sylow \(3\)-subgroups contains \(9\) elements. We have only \(3 + 1\) elements left for the Sylow \(2\)-subgroups. It has to be normal. </p>
+<p>Let us determine the group in this case. Let \(S = \{ Q_1, Q_2, Q_3, Q_4\} \) be the set of Sylow \(3\)-subgroups. We have the conjugation action of \(G\) on \(S\), hence a group homomorphism </p>
+<div class="displaymath" id="a0000000142">
+  \[  G \rightarrow S_4.  \]
+</div>
+<p> Recall \(Stab_{Q_i} (Q_j) = Q_i \cap Q_j\). Therefore the image of \(Q_i\) consisting of 3-cycles fixing \(Q_i\) while permuting the other three subgroups. </p>
+<p>There are exactly four Sylow \(3\)-subgroups contained in \(S_4\), and they generate \(A_4 = H\). Then since \(|A_4| = 12\), we have \(G \cong A_4\) for cardinality reason. </p>
+
+  </div>
+</div>
+<p>Let us try to classify groups of order \(12\). </p>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000143">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">2.24</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000143">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000144"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(p\) be a prime. Then any group \(G\) of order \(p^2\) must be abelian. </p>
+<p>Moreover, we have either \(G \cong \mathbb {Z}/p^2 \mathbb {Z}\) or \(G \cong \mathbb {Z}/p\mathbb {Z} \times \mathbb {Z}/p\mathbb {Z}\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000144">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We know \(G\) must have non-trivial center. Let \(x \in Z(G)\) be a non-trivial elements, and let \(H = \langle x \rangle \). If \(H = G\), we are done. In this case we have \(G \cong \mathbb {Z}/p^2 \mathbb {Z}\). </p>
+<p>Otherwise we have \(|H| = p\) and \(H \cong \mathbb {Z}/p\mathbb {Z}\). Let \(y \in G\) and \( y\notin H\). And consider \(K = \langle y \rangle \). If \(K =G\), we done again. In this case we have again \(G \cong \mathbb {Z}/p^2 \mathbb {Z}\). </p>
+<p>Now we are left with the case \(H \cong \mathbb {Z}/p\mathbb {Z}\) and \(K \cong \mathbb {Z}/p\mathbb {Z}\). Note that \(H \cap K\) is trivial. We also have \(xy = yx\) for any \(x \in H\) and \(y \in K\), since any group homomorphsim \(K \rightarrow Aut(H)\) is trivial (\(|Aut(H)|= p-1\)). Therefore the map \(H \times K \rightarrow G\), \((x, y) \mapsto xy\) is a group isomorphism. </p>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000145">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">2.25</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000145">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000146"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(G\) be a group (potentially infinite) such that \(G/Z(G)\) is cyclic (including the trivial case). Then \(G\) is abelian. </p>
+<p>In other words, \(G/Z(G)\) can be not a non-trivial cyclic group. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000146">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>HW 5. </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000147">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">2.26</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000147">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let us now classify groups of order \(12\). Let \(G\) be such a group. We already know that if \(n_3 \neq 1\) then we have \(G \cong A_4\). We assume \(n_3 = 1\) now, and let \(P_3\) be the Sylow \(3\)-subgroup. </p>
+<p>Assume \(n_2 =1\). Let \(P_4\) be the unique normal Sylow \(2\)-subgroup. We know \(P_4 \cong \mathbb {Z}/2^2 \mathbb {Z}\) or \(P_4 \cong \mathbb {Z}/2\mathbb {Z} \times \mathbb {Z}/2\mathbb {Z}\). Then we have \(G \cong P_4 \times P_3\), since \(P_4 \cap P_3 = \{ e\} \) and both of them are normal. </p>
+<p>Assume \(n_2 \neq 1\). Let \(P_4\) be a Sylow \(2\)-subgroup. We know \(P_4P_3 = G\). So we need to determine the multiplication of \(G\), which is essentially the group homomorphism \(P_4 \rightarrow Aut(P_3) \cong \mathbb {Z}/2\mathbb {Z}\). </p>
+<ol class="enumerate">
+  <li><p>Assume \(P_4 \cong \mathbb {Z}/2^2 \mathbb {Z}\). We consider group homomorphisms \(\phi : P_4 \rightarrow Aut(P_3) \cong \mathbb {Z}/2\mathbb {Z}\). There are only two of them, denoted by \(\phi _1\) and \(\phi _2\), where \(\phi _1\) is the trivial one. We have \(P_3 \rtimes _{\phi _1} P_4 \cong \mathbb {Z}/3 \mathbb {Z} \times \mathbb {Z}/2^2 \mathbb {Z}\) and \(\mathbb {Z}/3 \mathbb {Z} \rtimes _{\phi _2}\mathbb {Z}/2^2 \mathbb {Z}\). </p>
+</li>
+  <li><p>Assume \(P_4 \cong \mathbb {Z}/2 \mathbb {Z} \times \mathbb {Z}/2 \mathbb {Z}\). We consider group homomorphisms \(\phi : P_4 \rightarrow Aut(P_3) \cong \mathbb {Z}/2\mathbb {Z}\). There are four of them \(\phi _1\), \(\phi _2\), \(\phi _3\), \(\phi _4\). Here \(\phi _1\) is the trivial one. We assume \(\phi _2\) maps \((a,b)\) to \(a\), and \(\phi _2\) maps \((a,b)\) to \(b\), and \(\phi _4\) maps \((a,b)\) to \(a +b\). </p>
+<p>Then we have \(P_3 \rtimes _{\phi _1} P_4 \cong \mathbb {Z}/3 \mathbb {Z} \times \mathbb {Z}/2 \mathbb {Z} \times \mathbb {Z}/2 \mathbb {Z}\). Then we can check by direct computation that \(P_3 \rtimes _{\phi _2} P_4 \cong P_3 \rtimes _{\phi _3} P_4 \cong P_3 \rtimes _{\phi _4} P_4\). We see that \(P_3 \rtimes _{\phi _2} P_4 \cong G' \times \mathbb {Z}/2\mathbb {Z}\) for a non-abelian group \(G'\) of order \(6\). We see that \(G' \cong S_3\) by our earlier result. We conclude that \(P_3 \rtimes _{\phi _2} P_4 \cong S_3 \times \mathbb {Z}/2\mathbb {Z}\). </p>
+</li>
+</ol>
+<p>Now we can conclude that there are \(5\) groups of order \(12\), up to isomorphism. </p>
+
+  </div>
+</div>
+<h2 id="a0000000148">2.5 Solvable groups</h2>
+<div class="definition_thmwrapper theorem-style-definition" id="a0000000149">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">2.27</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000149">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>Let \(G\) be a group. </p>
+<ol class="enumerate">
+  <li><p>A <em>(normal) tower/series</em> of \(G\) is a sequence of subgroups </p>
+<div class="displaymath" id="a0000000150">
+  \[  G = G_0 \supset G_1 \supset G_2 \supset \cdots \supset G_m (= \{ e\} )  \]
+</div>
+<p> such that \(G_{i+1}\) is a <em>(normal)</em> subgroup of \(G_i\) (not necessarily of \(G\)). We have the <em>subquotient/factor</em> groups \(G_i/ G_{i+1}\). The normal tower is called abelian (resp. cyclic), if each factor group \(G_i/ G_{i+1}\) is abelian (resp. cyclic). </p>
+</li>
+  <li><p>A <em>refinement</em> of a given tower is a tower obtained by inserting a finite number of subgroups in the given tower. </p>
+</li>
+  <li><p>Let </p>
+<div class="displaymath" id="a0000000151">
+  \[  \begin{split}  G = H_0 \supset H_1 \supset H_2 \supset \cdots \supset H_n = \{ e\} ,\\ G = G_0 \supset G_1 \supset G_2 \supset \cdots \supset G_m = \{ e\}  \end{split}  \]
+</div>
+<p> be normal towers. Two normal towers are called <em>equivalent</em> if \(m = n\) and up to permutation of indices \(i \mapsto i'\), we have </p>
+<div class="displaymath" id="a0000000152">
+  \[  G_i/ G_{i+1} \cong H_{i'}/ H_{i'+1}, \qquad \text{ for all } i.  \]
+</div>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000153">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">2.28</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000153">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(G\) be a finite group. An abelian tower of \(G\) admits a cyclic refinement. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000154">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="a0000000155">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">2.29</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000155">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>A normal tower </p>
+<div class="displaymath" id="a0000000156">
+  \[  G = G_0 \supset G_1 \supset G_2 \supset \cdots \supset G_m = \{ e\}   \]
+</div>
+<p> is called a <em>composition series</em> of \(G\) is each factor group \(G_i/G_{i+1}\) is simple. The factor groups are called <em>composition factors</em> of \(G\). Note that this is NOT well-defined yet. </p>
+<p>(Recall a group \(H\) is called simple if \(H\neq \{ e\} \) and it does not contain any other normal subgroups besides \(\{ e\} \) and \(H\).) </p>
+
+  </div>
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="a0000000157">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">2.30</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000157">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="remark_thmcontent">
+  <p>The composition series always exist for a finite group \(G\). The group \(\mathbb {Z}\) has no composition series. </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000158">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">2.31</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000158">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>Let \(G= {\mathbb {Z}}/6{\mathbb {Z}}\). We have two equivalent normal towers </p>
+<div class="displaymath" id="a0000000159">
+  \[  G \supset {\mathbb {Z}}/3{\mathbb {Z}}\supset \{ e\} , \quad G \supset {\mathbb {Z}}/2{\mathbb {Z}}\supset \{ e\} .  \]
+</div>
+</li>
+  <li><p>The two groups \(\mathbb {Z}/4\mathbb {Z}\) and \(\mathbb {Z}/2\mathbb {Z}\times \mathbb {Z}/2\mathbb {Z}\) have the same composition factors, while non-isomorphic. </p>
+</li>
+  <li><p>A group \(G\) is called <em>solvable</em> if it admits a normal tower </p>
+<div class="displaymath" id="a0000000160">
+  \[  G = G_0 \supset G_1 \supset \cdots \supset G_m = \{ e\}   \]
+</div>
+<p> such that \(G_{i}/G_{i+1}\) is abelian. </p>
+<p>We claim \(S_3\) is solvable. We actually have the normal tower </p>
+<div class="displaymath" id="a0000000161">
+  \[  S_3 \supset A_3 \supset \{ e\} .  \]
+</div>
+</li>
+  <li><p>\(S_5\) is not solvable (Google this). This plays a VERY important role in Galois theory. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000162">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">2.32</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000162">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000163"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(G\) be a group. The commutator subgroup \(G^{(1)} = [G, G]\) of \(G\) is defined to be the subgroup generated by \([a,b]= aba^{-1}b^{-1}\) for all \(a, b \in G\). Then \(G^{(1)}\) is normal in \(G\). In particular, any group homomorphism from \(G\) to an abelian group factors through \(G/ [G, G]\). </p>
+<p>We similarly define \(G^{(i+1)} = [G^{(i)}, G^{(i)}]\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000163">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(u \in [G, G]\). Then </p>
+<div class="displaymath" id="a0000000164">
+  \[  gug^{-1} = u \cdot u^{-1} gug^{-1} = u \cdot [u^{-1}, g] \in [G, G].  \]
+</div>
+<p> This shows the normality. The rest follows from the universal property of the quotient. </p>
+
+  </div>
+</div>
+<p> We often write \(G^{(0)} = G\). </p>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000165">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">2.33</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000165">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000166"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>A group \(G\) is solvable if and only if \(G^{(n)} = \{ e\} \) for some \(n\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000166">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We assume \(G^{(n)} = \{ e\} \) for some \(n\). Since \(G/ [G,G]\) is always abelian, the claim follows. </p>
+<p>Now we prove the other direction. Let </p>
+<div class="displaymath" id="a0000000167">
+  \[  G = H_0 \supset H_1 \supset \cdots \supset H_m = \{ e\}   \]
+</div>
+<p> be a normal tower with abelian factor groups. Since \(H_i/ H_{i+1}\) is abelian, we must have </p>
+<div class="displaymath" id="a0000000168">
+  \[  H_{i+1} \supset [H_i, H_i].  \]
+</div>
+<p> We then claim \(G^{(i)} = [G^{(i-1)}, G^{(i-1)}] \subset [H_{(i-1)}, H_{(i-1)}] \subset H_{i}\) by induction. This is immediate, since \(G^{(0)} = H_0\). </p>
+
+  </div>
+</div>
+<h1 id="a0000000169">3 Nilpotent groups</h1>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000170">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">3.1</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000170">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <ol class="enumerate">
+  <li><p>For any (finite or infinite) group \(G\) we define the following subgroups inductively: </p>
+<div class="displaymath" id="a0000000171">
+  \[  Z_0 (G) =1, Z_1 (G) = Z(G)  \]
+</div>
+<p> and \(Z_{i+1}(G)\) is the subgroup \(\pi ^{-1} (Z (G/ Z_i(G)))\) for the canonical quotient \(\pi : G \rightarrow G/Z_i(G)\). </p>
+<p>The chain of (normal) subgroups </p>
+<div class="displaymath" id="a0000000172">
+  \[  Z_0 \le Z_1 \le Z_2 \le \cdots  \]
+</div>
+<p> is called the upper central series of \(G\). </p>
+</li>
+  <li><p>A group \(G\) is called nilpotent if \(Z_n(G) =G\) for some \(n\). The smallest such \(n\) is called the nilpotence class of \(G\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="cor_thmwrapper theorem-style-plain" id="a0000000173">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">3.2</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000173">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="cor_thmcontent">
+  <p>If \(G\) is nilpotent, then \(G\) is solvable. </p>
+
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000174">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">3.3</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000174">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <ol class="enumerate">
+  <li><p>If \(G\) is abelian, then \(G\) is nilpotent. </p>
+</li>
+  <li><p>We have \(Z_n (S_3) = \{ e\} \) for any \(n\). So \(S_3\) is not nilpotent. So \(S_3\) is solvable, but not nilpotent. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="a0000000175">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">3.4</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000175">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="remark_thmcontent">
+  <p>There are various equivalent characterizations of nilpotent groups. </p>
+
+  </div>
+</div>
+<div class="lem_thmwrapper theorem-style-plain" id="a0000000176">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">3.5</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000176">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="lem_thmcontent">
+  <p>Let \(G\) be a finite \(p\)-group for some prime \(p\). Then \(G\) is nilpotent. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000177">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="thm_thmwrapper theorem-style-plain" id="a0000000178">
+  <div class="thm_thmheading">
+    <span class="thm_thmcaption">
+    Theorem
+    </span>
+    <span class="thm_thmlabel">3.6</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000178">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000179"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="thm_thmcontent">
+  <p>Let \(G\) be a finite group of order \(p_1^{n_1} \cdots p_k^{n_k}\) with primes \(p_i\) and \(n_i {\gt}0\). Let \(P_i\) be a Sylow \(p_i\)-subgroup of \(G\). Then the following are equivalent: </p>
+<ol class="enumerate">
+  <li><p>\(G\) is nilpotent; </p>
+</li>
+  <li><p>if \(H\) is a proper subgroup of \(G\), then \(H\) is a proper subgroup of \(N_G(H)\); </p>
+</li>
+  <li><p>every Sylow \(p_i\)-subgroup is normal; </p>
+</li>
+  <li><p>\(G \cong P_1 \times P_2 \times \cdots \times P_k\). </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000179">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We show \((1) \implies (2)\). We proceed on induction of \(|G|\). The base case is vacuous. </p>
+<p>We know \(Z(G) \neq \{ e \} \). We clearly have \(H Z(G) \subset N_G(H)\). We can assume \(Z(G) \subset H\), otherwise, we are done. We consider the quotients \(H / Z(G) \rightarrow G /Z(G)\). Then \(H/ Z(G)\) is a proper subgroup of \(G /Z(G)\). Let \(K / Z(G)\) be the normalizer of \(H/ Z(G)\) in \(G /Z(G)\). We know \(H/ Z(G)\) is a proper subgroup of \(K / Z(G)\) by induction hypothesis. Hence \(H\) is a proper subgroup of \(K\). We claim \(K \subset N_G(H)\). For any \( h \in H\) and \(k \in K\), we have \(k h k^{-1} Z(G) \subset HZ(G) = H\). The claim follows. </p>
+<p>We show \((2) \implies (3)\). Let \(N = N_G(P_i)\). We know \(P_i\) is a normal subgroup of \(N\), and the unique Sylow \(p_i\)-subgroup of \(N\). Let \(H = N_G(N)\). Then we claim \(H = N\). We clearly have \(N \subset H\). On the other hand, for any \(h \in H\), we have \(hNh^{-1} = N\) by definition. This means \(hP_ih^{-1} \subset N\) as well. But since \( hP_ih^{-1}\) is a Sylow \(p_i\)-subgroup of \(N\), we must have \( hP_ih^{-1} = P_i\). Therefore \(h \in N = N_G(P_i)\). This proves the claim. Then by \((1)\), we see that \(N = N_G(N) = G\). </p>
+<p>We show \((3) \implies (4)\). We have shown before that \(P_1P_2 \cong P_1 \times P_2\). Now \(P_1P_2\) and \(P_3\) are normal subgroups of \(G\) such that \(P_1P_2 \cap P_3 = \{ e\} \). Then we have \(P_1P_2P_3 \cong P_1 \times P_2 \times P_3\). We then proceed by induction. </p>
+<p>Finally, we show \((4) \implies (1)\). We know \(P_i\) has nontrivial center. Therefore \(P_1 \times P_2 \times \cdots \times P_k\) has non-trivial centers. We can repeat this argument for the quotient \(G/Z(G)\) to show \(Z_1 (G) \neq Z(G)\). Since \(G\) is finite, we eventualy must have \(Z_n(G) = G\) for some \(n\). </p>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000180">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">3.7</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000180">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000181"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(G\) be a finite group. Let \(H\) be a normal subgroup of \(G\) and \(P\) be a Sylow \(p\)-subgroup of \(H\). Then \(G = H N_G(P)\). </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000181">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>For any \(g \in G\), since \(H\) is normal, we have \(g P g^{-1} \subset H\). Then we apply the Sylow theorem to the group \(H\), we see that \(g P g^{-1} = h P h^{-1}\) for some \(h \in H\). In other words, we have \(h^{-1}g \in N_G(P)\). Hence \(g \in HN_G(P)\). Therefore \(G=HN_G(P)\). </p>
+
+  </div>
+</div>
+<div class="defi_thmwrapper theorem-style-definition" id="a0000000182">
+  <div class="defi_thmheading">
+    <span class="defi_thmcaption">
+    Definition
+    </span>
+    <span class="defi_thmlabel">3.8</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000182">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="defi_thmcontent">
+  <p>Let \(G\) be a group. A proper subgroup \(M\) of \(G\) is called maximal if whenever \(H \le H \le G\), then either \(H= M\) or \(M= G\). </p>
+
+  </div>
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000183">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">3.9</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000183">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000184"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>Let \(G\) be a finite group. Then \(G\) is nilpotent if and only if all maximal subgroups of \(G\) is normal. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000184">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(M\) be a maximal subgroup of \(G\). Then the Theorem, we know \(M\) is a proper subgroup of \(N_G(M)\). We must have \(N_G(M) = G\). Hence \(M\) is normal in \(G\). </p>
+<p>For reverse implication, we show every Sylow \(p\)-subgroup is normal (for any prime \(p\)). Let \(P\) be a Sylow \(p\)-subgroup. Assume the contrary that \(P\) is not normal in \(G\). Then we can find a maximal subgroup \(M\) containing \(N_G(P)\) (since \(G\) is finite). Then we see that \(M\) is normal in \(G\) by assumption. Then \(MN_G(P) = G\) by the lemma. But \(N_G(P) \subset M\), hence \(M = MN_G(P) = G\). We have a contradiction. </p>
+
+  </div>
+</div>
+<h2 id="a0000000185">3.1 Inverse limits</h2>
+<p> We consider a sequence of groups \(\{ G_n\} _{n=1}^{\infty }\) together with group homomorphisms \(f_n: G_n \rightarrow G_{n-1}\). We define the inverse limit \(\varprojlim G_i\) of of the sequence of groups as follows. As a set, we have </p>
+<div class="displaymath" id="a0000000186">
+  \[  \varprojlim G_i = \{ (x_i) \vert x_i \in G_i, f_i(x_i)= x_{i-1}\} .  \]
+</div>
+<p> We then define the multiplication on \(\varprojlim G_i\) by </p>
+<div class="displaymath" id="a0000000187">
+  \[  (x_i) \cdot (y_i) = (x_iy_i).  \]
+</div>
+<div class="prop_thmwrapper theorem-style-plain" id="a0000000188">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">3.10</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000188">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="prop_thmcontent">
+  <p>\(\varprojlim G_i\) is a group with the multiplication defined above. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000189">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="a0000000190">
+  <div class="example_thmheading">
+    <span class="example_thmcaption">
+    Example
+    </span>
+    <span class="example_thmlabel">3.11</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#a0000000190">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="example_thmcontent">
+  <p>Let \(G_n = \mathbb {Z}/p^n \mathbb {Z}\) for \(n \ge 1\) and let \(f_n : G_n \rightarrow G_{n-1}\) be the canonical quotient. Then the group \(\varprojlim G_n\) is called \(p\)-adic integers, denoted by \(\mathbb {Z}_p\). We often only consider the case when \(p\) is a prime. We will see this is actually a ring in the future semester. </p>
+<p>An element in \(\mathbb {Z}_p\) is a sequence \((x_n)\). For example in \(\mathbb {Z}_3\), we have </p>
+<div class="displaymath" id="a0000000191">
+  \[  (0, 2 \times 3 + 0, 3^2 + 2 \times 3 + 0, \dots , )  \]
+</div>
+<p> Equivalently, we can write \((x_n) \in \mathbb {Z}_p\) as \( \sum _{i = 0}^\infty a_i p^i\) where \( 0\le a_i {\lt} p\). Then we have \(x_n = \sum _{i = 0}^{n-1} a_n p^n\). </p>
+
+  </div>
+</div>
+<dl class="bibliography">
+  <dt><a name="Lang">1</a></dt>
+  <dd><p>S. Lang, <em>Algebra</em>, Revised Third Edition, Graduate Texts in Mathematics. </p>
+</dd>
+  <dt><a name="DF">2</a></dt>
+  <dd><p>D. Dummit and R. Foote, <em>Abstract Algebra</em>, 3rd edition, Wiley. </p>
+</dd>
+</dl>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+</body>
+</html>
