@@ -1,0 +1,244 @@
+\documentclass[a4paper, reqno, 12pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm,amsfonts,amssymb,amsmath,amsxtra,amsrefs}
+\newtheorem{thm}{Theorem}
+\newtheorem{theorem}[thm]{Theorem}
+\newtheorem{thmintro}{Theorem}
+\newtheorem{propintro}[thmintro]{Proposition}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{corollary}[thm]{Corollary}
+\newtheorem{axiom}[thm]{Axiom}
+\theoremstyle{definition}
+%\newtheorem{def}[theorem]{Definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{exercise}[thm]{Exercise}
+\newtheorem{situation}[thm]{Situation}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{remarks}[thm]{Remarks}
+\newtheorem{question}[thm]{Question}
+
+
+\numberwithin{equation}{section}
+\numberwithin{thm}{section}
+
+
+ 
+
+\newcommand{\htodo}{\todo[inline,color=orange!20, caption={}]}
+ 
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\green}[1]{{\color{green}#1}}
+\newcommand{\white}[1]{{\color{white}#1}}
+
+% new commands
+
+\newcommand{\sA}{\ensuremath{\mathscr{A}}\xspace}
+\newcommand{\sB}{\ensuremath{\mathscr{B}}\xspace}
+\newcommand{\sC}{\ensuremath{\mathscr{C}}\xspace}
+\newcommand{\sD}{\ensuremath{\mathscr{D}}\xspace}
+\newcommand{\sE}{\ensuremath{\mathscr{E}}\xspace}
+\newcommand{\sF}{\ensuremath{\mathscr{F}}\xspace}
+\newcommand{\sG}{\ensuremath{\mathscr{G}}\xspace}
+\newcommand{\sH}{\ensuremath{\mathscr{H}}\xspace}
+\newcommand{\sI}{\ensuremath{\mathscr{I}}\xspace}
+\newcommand{\sJ}{\ensuremath{\mathscr{J}}\xspace}
+\newcommand{\sK}{\ensuremath{\mathscr{K}}\xspace}
+\newcommand{\sL}{\ensuremath{\mathscr{L}}\xspace}
+\newcommand{\sM}{\ensuremath{\mathscr{M}}\xspace}
+\newcommand{\sN}{\ensuremath{\mathscr{N}}\xspace}
+\newcommand{\sO}{\ensuremath{\mathscr{O}}\xspace}
+\newcommand{\sP}{\ensuremath{\mathscr{P}}\xspace}
+\newcommand{\sQ}{\ensuremath{\mathscr{Q}}\xspace}
+\newcommand{\sR}{\ensuremath{\mathscr{R}}\xspace}
+\newcommand{\sS}{\ensuremath{\mathscr{S}}\xspace}
+\newcommand{\sT}{\ensuremath{\mathscr{T}}\xspace}
+\newcommand{\sU}{\ensuremath{\mathscr{U}}\xspace}
+\newcommand{\sV}{\ensuremath{\mathscr{V}}\xspace}
+\newcommand{\sW}{\ensuremath{\mathscr{W}}\xspace}
+\newcommand{\sX}{\ensuremath{\mathscr{X}}\xspace}
+\newcommand{\sY}{\ensuremath{\mathscr{Y}}\xspace}
+\newcommand{\sZ}{\ensuremath{\mathscr{Z}}\xspace}
+
+
+\newcommand{\fka}{\ensuremath{\mathfrak{a}}\xspace}
+\newcommand{\fkb}{\ensuremath{\mathfrak{b}}\xspace}
+\newcommand{\fkc}{\ensuremath{\mathfrak{c}}\xspace}
+\newcommand{\fkd}{\ensuremath{\mathfrak{d}}\xspace}
+\newcommand{\fke}{\ensuremath{\mathfrak{e}}\xspace}
+\newcommand{\fkf}{\ensuremath{\mathfrak{f}}\xspace}
+\newcommand{\fkg}{\ensuremath{\mathfrak{g}}\xspace}
+\newcommand{\fkh}{\ensuremath{\mathfrak{h}}\xspace}
+\newcommand{\fki}{\ensuremath{\mathfrak{i}}\xspace}
+\newcommand{\fkj}{\ensuremath{\mathfrak{j}}\xspace}
+\newcommand{\fkk}{\ensuremath{\mathfrak{k}}\xspace}
+\newcommand{\fkl}{\ensuremath{\mathfrak{l}}\xspace}
+\newcommand{\fkm}{\ensuremath{\mathfrak{m}}\xspace}
+\newcommand{\fkn}{\ensuremath{\mathfrak{n}}\xspace}
+\newcommand{\fko}{\ensuremath{\mathfrak{o}}\xspace}
+\newcommand{\fkp}{\ensuremath{\mathfrak{p}}\xspace}
+\newcommand{\fkq}{\ensuremath{\mathfrak{q}}\xspace}
+\newcommand{\fkr}{\ensuremath{\mathfrak{r}}\xspace}
+\newcommand{\fks}{\ensuremath{\mathfrak{s}}\xspace}
+\newcommand{\fkt}{\ensuremath{\mathfrak{t}}\xspace}
+\newcommand{\fku}{\ensuremath{\mathfrak{u}}\xspace}
+\newcommand{\fkv}{\ensuremath{\mathfrak{v}}\xspace}
+\newcommand{\fkw}{\ensuremath{\mathfrak{w}}\xspace}
+\newcommand{\fkx}{\ensuremath{\mathfrak{x}}\xspace}
+\newcommand{\fky}{\ensuremath{\mathfrak{y}}\xspace}
+\newcommand{\fkz}{\ensuremath{\mathfrak{z}}\xspace}
+
+
+\newcommand{\fkA}{\ensuremath{\mathfrak{A}}\xspace}
+\newcommand{\fkB}{\ensuremath{\mathfrak{B}}\xspace}
+\newcommand{\fkC}{\ensuremath{\mathfrak{C}}\xspace}
+\newcommand{\fkD}{\ensuremath{\mathfrak{D}}\xspace}
+\newcommand{\fkE}{\ensuremath{\mathfrak{E}}\xspace}
+\newcommand{\fkF}{\ensuremath{\mathfrak{F}}\xspace}
+\newcommand{\fkG}{\ensuremath{\mathfrak{G}}\xspace}
+\newcommand{\fkH}{\ensuremath{\mathfrak{H}}\xspace}
+\newcommand{\fkI}{\ensuremath{\mathfrak{I}}\xspace}
+\newcommand{\fkJ}{\ensuremath{\mathfrak{J}}\xspace}
+\newcommand{\fkK}{\ensuremath{\mathfrak{K}}\xspace}
+\newcommand{\fkL}{\ensuremath{\mathfrak{L}}\xspace}
+\newcommand{\fkM}{\ensuremath{\mathfrak{M}}\xspace}
+\newcommand{\fkN}{\ensuremath{\mathfrak{N}}\xspace}
+\newcommand{\fkO}{\ensuremath{\mathfrak{O}}\xspace}
+\newcommand{\fkP}{\ensuremath{\mathfrak{P}}\xspace}
+\newcommand{\fkQ}{\ensuremath{\mathfrak{Q}}\xspace}
+\newcommand{\fkR}{\ensuremath{\mathfrak{R}}\xspace}
+\newcommand{\fkS}{\ensuremath{\mathfrak{S}}\xspace}
+\newcommand{\fkT}{\ensuremath{\mathfrak{T}}\xspace}
+\newcommand{\fkU}{\ensuremath{\mathfrak{U}}\xspace}
+\newcommand{\fkV}{\ensuremath{\mathfrak{V}}\xspace}
+\newcommand{\fkW}{\ensuremath{\mathfrak{W}}\xspace}
+\newcommand{\fkX}{\ensuremath{\mathfrak{X}}\xspace}
+\newcommand{\fkY}{\ensuremath{\mathfrak{Y}}\xspace}
+\newcommand{\fkZ}{\ensuremath{\mathfrak{Z}}\xspace}
+
+
+
+
+\newcommand{\heart}{{\heartsuit}}
+\newcommand{\club}{{\clubsuit}}
+\newcommand{\diam}{{\Diamond}}
+\newcommand{\spade}{{\spadesuit}}
+
+\newcommand{\bA}{\mathbf A}
+\newcommand{\bE}{\mathbf E}
+\newcommand{\bG}{\mathbf G}
+\newcommand{\bK}{\mathbf K}
+\newcommand{\bM}{\mathbf M}
+\newcommand{\bQ}{\mathbf Q}
+
+
+
+\newcommand{\BA}{\ensuremath{\mathbb {A}}\xspace}
+\newcommand{\BB}{\ensuremath{\mathbb {B}}\xspace}
+\newcommand{\BC}{\ensuremath{\mathbb {C}}\xspace}
+\newcommand{\BD}{\ensuremath{\mathbb {D}}\xspace}
+\newcommand{\BE}{\ensuremath{\mathbb {E}}\xspace}
+\newcommand{\BF}{\ensuremath{\mathbb {F}}\xspace}
+\newcommand{{\BG}}{\ensuremath{\mathbb {G}}\xspace}
+\newcommand{\BH}{\ensuremath{\mathbb {H}}\xspace}
+\newcommand{\BI}{\ensuremath{\mathbb {I}}\xspace}
+\newcommand{\BJ}{\ensuremath{\mathbb {J}}\xspace}
+\newcommand{{\BK}}{\ensuremath{\mathbb {K}}\xspace}
+\newcommand{\BL}{\ensuremath{\mathbb {L}}\xspace}
+\newcommand{\BM}{\ensuremath{\mathbb {M}}\xspace}
+\newcommand{\BN}{\ensuremath{\mathbb {N}}\xspace}
+\newcommand{\BO}{\ensuremath{\mathbb {O}}\xspace}
+\newcommand{\BP}{\ensuremath{\mathbb {P}}\xspace}
+\newcommand{\BQ}{\ensuremath{\mathbb {Q}}\xspace}
+\newcommand{\BR}{\ensuremath{\mathbb {R}}\xspace}
+\newcommand{\BS}{\ensuremath{\mathbb {S}}\xspace}
+\newcommand{\BT}{\ensuremath{\mathbb {T}}\xspace}
+\newcommand{\BU}{\ensuremath{\mathbb {U}}\xspace}
+\newcommand{\BV}{\ensuremath{\mathbb {V}}\xspace}
+\newcommand{\BW}{\ensuremath{\mathbb {W}}\xspace}
+\newcommand{\BX}{\ensuremath{\mathbb {X}}\xspace}
+\newcommand{\BY}{\ensuremath{\mathbb {Y}}\xspace}
+\newcommand{\BZ}{\ensuremath{\mathbb {Z}}\xspace}
+
+
+
+\newcommand{\CA}{\ensuremath{\mathcal {A}}\xspace}
+\newcommand{\CB}{\ensuremath{\mathcal {B}}\xspace}
+\newcommand{\CC}{\ensuremath{\mathcal {C}}\xspace}
+\newcommand{\CD}{\ensuremath{\mathcal {D}}\xspace}
+\newcommand{\CE}{\ensuremath{\mathcal {E}}\xspace}
+\newcommand{\CF}{\ensuremath{\mathcal {F}}\xspace}
+\newcommand{\CG}{\ensuremath{\mathcal {G}}\xspace}
+\newcommand{\CH}{\ensuremath{\mathcal {H}}\xspace}
+\newcommand{\CI}{\ensuremath{\mathcal {I}}\xspace}
+\newcommand{\CJ}{\ensuremath{\mathcal {J}}\xspace}
+\newcommand{\CK}{\ensuremath{\mathcal {K}}\xspace}
+\newcommand{\CL}{\ensuremath{\mathcal {L}}\xspace}
+\newcommand{\CM}{\ensuremath{\mathcal {M}}\xspace}
+\newcommand{\CN}{\ensuremath{\mathcal {N}}\xspace}
+\newcommand{\CO}{\ensuremath{\mathcal {O}}\xspace}
+\newcommand{\CP}{\ensuremath{\mathcal {P}}\xspace}
+\newcommand{\CQ}{\ensuremath{\mathcal {Q}}\xspace}
+\newcommand{\CR}{\ensuremath{\mathcal {R}}\xspace}
+\newcommand{\CS}{\ensuremath{\mathcal {S}}\xspace}
+\newcommand{\CT}{\ensuremath{\mathcal {T}}\xspace}
+\newcommand{\CU}{\ensuremath{\mathcal {U}}\xspace}
+\newcommand{\CV}{\ensuremath{\mathcal {V}}\xspace}
+\newcommand{\CW}{\ensuremath{\mathcal {W}}\xspace}
+\newcommand{\CX}{\ensuremath{\mathcal {X}}\xspace}
+\newcommand{\CY}{\ensuremath{\mathcal {Y}}\xspace}
+\newcommand{\CZ}{\ensuremath{\mathcal {Z}}\xspace}
+
+
+\newcommand{\RA}{\ensuremath{\mathrm {A}}\xspace}
+\newcommand{\RB}{\ensuremath{\mathrm {B}}\xspace}
+\newcommand{\RC}{\ensuremath{\mathrm {C}}\xspace}
+\newcommand{\RD}{\ensuremath{\mathrm {D}}\xspace}
+\newcommand{\RE}{\ensuremath{\mathrm {E}}\xspace}
+\newcommand{\RF}{\ensuremath{\mathrm {F}}\xspace}
+\newcommand{\RG}{\ensuremath{\mathrm {G}}\xspace}
+\newcommand{\RH}{\ensuremath{\mathrm {H}}\xspace}
+\newcommand{\RI}{\ensuremath{\mathrm {I}}\xspace}
+\newcommand{\RJ}{\ensuremath{\mathrm {J}}\xspace}
+\newcommand{\RK}{\ensuremath{\mathrm {K}}\xspace}
+\newcommand{\RL}{\ensuremath{\mathrm {L}}\xspace}
+\newcommand{\RM}{\ensuremath{\mathrm {M}}\xspace}
+\newcommand{\RN}{\ensuremath{\mathrm {N}}\xspace}
+\newcommand{\RO}{\ensuremath{\mathrm {O}}\xspace}
+\newcommand{\RP}{\ensuremath{\mathrm {P}}\xspace}
+\newcommand{\RQ}{\ensuremath{\mathrm {Q}}\xspace}
+\newcommand{\RR}{\ensuremath{\mathrm {R}}\xspace}
+\newcommand{\RS}{\ensuremath{\mathrm {S}}\xspace}
+\newcommand{\RT}{\ensuremath{\mathrm {T}}\xspace}
+\newcommand{\RU}{\ensuremath{\mathrm {U}}\xspace}
+\newcommand{\RV}{\ensuremath{\mathrm {V}}\xspace}
+\newcommand{\RW}{\ensuremath{\mathrm {W}}\xspace}
+\newcommand{\RX}{\ensuremath{\mathrm {X}}\xspace}
+\newcommand{\RY}{\ensuremath{\mathrm {Y}}\xspace}
+\newcommand{\RZ}{\ensuremath{\mathrm {Z}}\xspace}
+
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+
+\title[]{Week 2 Lecture notes }
+
+\maketitle
+\tableofcontents
+\include{content}
+\begin{thebibliography}{}
+    \bibitem{Lang}S. Lang, {\em Algebra}, Revised Third Edition, Graduate Texts in Mathematics.
+    \bibitem{DF}D. Dummit and R. Foote, {\em Abstract Algebra}, 3rd edition, Wiley.
+
+\end{thebibliography}
+
+
+\end{document}
+\\
